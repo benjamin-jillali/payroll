@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="pu" transaction-type="JTA">
+  <!--resource local is another type of transaction where you manually do the transactions insted of the jpa 
+  <persistence-unit name="pu" transaction-type="RESOURCE_LOCAL"> -->
    <jta-data-source>java:app/Payroll/MyDS</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
+    <!-- provider will define the type of provider you want to use by defualt each server comes with a provider
+    	 for instance payara ships with eclipse
+    <provider></provider>-->
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+      <!-- generates script based off drop and create a script schema -->
+<!--       <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create" />
+      location of drop file
+      <property name="javax.persistence.schema-generation.scripts.drop-target" value="script/link.ddl" />
+      location create file
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="script/file/link.ddl" /> -->
     </properties>
   </persistence-unit>
 </persistence>
