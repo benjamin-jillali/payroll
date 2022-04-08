@@ -7,7 +7,7 @@ L'objectif est d'essayer d'apprendre et d'expérimenter avec des différentes fo
 L'application utilise asynchronous Threads, un système de sécurité pour les RestPoints, Listeners, Loggers, filters et d'autres fonctionnalités.
 
 ## Explication
-   Le package "config" gère les configurations et les règles pour l'application et la configuration du serveur.
+   Le package         "config" gère les configurations et les règles pour l'application et la configuration du serveur.
 Les classe comme DynamicFilter.java est DynamicFilterFeature.java controle des communication avec des filtre.
 Les class de JaxRs gérer la configuration de serveur est les class des Secure.java est Security.. 
 faire partie de la configuration de securite.
