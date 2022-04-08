@@ -1,5 +1,11 @@
 # Payroll
 
+- [Introduction](#introduction)
+- [Explication](#explication)
+- [Technologies](#technologies)
+- [Build](#build)
+- [Run](#run)
+
 ## Introduction
 Il s'agit d'une application Web qui gère les profils des employés
 et des gestionnaires d'une entreprise et leurs salaires.
@@ -43,6 +49,6 @@ Enfin il y a une petite interface client à l'emplacement src/main/webapp.<br>
 ## Build
 mvn clean package && docker build -t com.pedantic/payroll .
 
-## RUN
+## Run
 
 docker rm -f payroll || true && docker run -d -p 8080:8080 -p 4848:4848 --name payroll com.pedantic/payroll 
